@@ -1,5 +1,11 @@
 <import src="../../wxParse/wxParse.wxml" />
 <view class="container"> 
+    <view class="widget-goTop" bindtap="goHome" >
+    <view class="gotop-wrap">
+    <image src="../../images/home.png" style="vertical-align: middle;width:25px; height: 25px;"></image>
+  </view>
+</view>
+
    <view class="swiper-container" wx:if="{{!goodsDetail.basicInfo.videoId}}">
         <swiper class="swiper_box" 
                     autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" bindchange="swiperchange">
@@ -107,3 +113,4 @@
         </view>
     </view>
 </view>
+

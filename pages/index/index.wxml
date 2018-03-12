@@ -71,7 +71,7 @@
     <view hidden="{{loadingMoreHidden ? true : false}}" class="no-more-goods">没有更多啦</view>
     <view class="widget-goTop" bindtap="calling" wx:if="{{ serviceHotline }}">
     <view class="gotop-wrap">
-    <image src="../../images/callphone.png" style="margin-right: 5px;vertical-align: middle;width:25px; height: 25px;"></image>
+    <image src="../../images/callphone.png" style="vertical-align: middle;width:25px; height: 25px;"></image>
   </view>
 </view>
 </view>

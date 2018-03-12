@@ -88,6 +88,11 @@ Page({
       url: "/pages/shop-cart/index"
     });
   },
+  goHome: function () {
+    wx.switchTab({
+      url: "/pages/index/index"
+    });
+  },
   toAddShopCar: function () {
     this.setData({
       shopType: "addShopCar"
