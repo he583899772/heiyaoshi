@@ -227,7 +227,7 @@ swiper-item image {
   width: 150rpx;
   height: 70rpx;
   margin-right: 0rpx;
-  background-color:#1AAD19;
+  background-color:blueviolet;
   font-size: 28rpx;
   align-items: center;
   border-top-left-radius: 0rpx;
@@ -235,26 +235,4 @@ swiper-item image {
   color:#fff;
   border:none;
   position: relative;
-}
-/* 返回顶部 */
-.widget-goTop { 
-  position: fixed; 
-  bottom: 40px; 
-  right: 5px; 
-  background: rgba(0,0,0,0.48); 
-  border-radius: 50%; 
-  overflow: hidden; 
-  z-index: 500; 
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4)
-} 
-.widget-goTop .gotop-wrap { 
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  width: 45px; 
-  height: 45px; 
-  color: #fff; 
-  border-radius: 50%; 
-  background-color: #fff; 
 }

@@ -79,7 +79,7 @@ Page({
                       keywords2 += '立即好评，系统赠送您' + app.globalData.order_reputation_score +'积分奖励。';
                     }
                     postJsonString.keyword2 = { value: keywords2, color: '#173177' }
-                    app.sendTempleMsgImmediately('tvVBXUTveluBAtJ3x9YTAUgDGs-LN863R0ewr7rKBU8', formId,
+                    app.sendTempleMsgImmediately('tvVBXUTveluBAtJ3x9YTAfwkcM54uRMdCjWzm_59fC4', formId,
                       '/pages/order-details/index?id=' + orderId, JSON.stringify(postJsonString));
                   }
                 }

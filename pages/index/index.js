@@ -16,7 +16,7 @@ Page({
     goods:[],
     scrollTop:"0",
     loadingMoreHidden:true,
-
+    serviceHotline:'',
     hasNoCoupons:true,
     coupons: [],
     searchInput: '',
@@ -112,6 +112,7 @@ Page({
     })
     that.getCoupons ();
     that.getNotice ();
+    that.getPhone();
   },
   getGoodsList: function (categoryId) {
     if (categoryId == 0) {
@@ -246,6 +247,20 @@ Page({
       }
     })
   },
+  getPhone: function () {
+    var that = this;
+    wx.request({
+      url: 'https://api.it120.cc/' + app.globalData.subDomain + '/config/get-value',
+      data: { key: 'serviceHotline' },
+      success: function (res) {
+        if (res.data.code == 0) {
+          that.setData({
+            serviceHotline: res.data.data.value
+          });
+        }
+      }
+    })
+  },
   listenerSearchInput: function (e) {
     this.setData({
       searchInput: e.detail.value
@@ -254,5 +269,16 @@ Page({
   },
   toSearch : function (){
     this.getGoodsList(this.data.activeCategoryId);
+  },
+  calling: function () {
+    wx.makePhoneCall({
+      phoneNumber: this.data.serviceHotline,
+      success: function () {
+        console.log("拨打电话成功！")
+      },
+      fail: function () {
+        console.log("拨打电话失败！")
+      }
+    })
   }
 })

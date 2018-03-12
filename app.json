@@ -1,6 +1,7 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/classify/index",
     "pages/goods-details/index",
     "pages/shop-cart/index",
     "pages/to-pay-order/index",
@@ -32,6 +33,11 @@
       "iconPath": "images/nav/home-off.png",
       "selectedIconPath": "images/nav/home-on.png",
       "text": "首页"
+    }, {
+      "pagePath": "pages/classify/index",
+      "iconPath": "images/nav/classify-off.png",
+      "selectedIconPath": "images/nav/classify-on.png",
+      "text": "分类"
     }, {
       "pagePath": "pages/shop-cart/index",
       "iconPath": "images/nav/cart-off.png",
