@@ -19,6 +19,7 @@ Page({
     buyNumMin:1,
     buyNumMax:0,
 
+    serviceHotline: '',
     propertyChildIds:"",
     propertyChildNames:"",
     canSubmit:false, //  选中规格尺寸时候是否允许加入购物车
@@ -82,6 +83,7 @@ Page({
       }
     })
     this.reputation(e.id);
+    this.getPhone();
   },
   goShopCar: function () {
     wx.reLaunch({
@@ -437,6 +439,31 @@ Page({
             videoMp4Src: res.data.data.fdMp4
           });
         }
+      }
+    })
+  },
+   getPhone: function () {
+    var that = this;
+    wx.request({
+      url: 'https://api.it120.cc/' + app.globalData.subDomain + '/config/get-value',
+      data: { key: 'serviceHotline' },
+      success: function (res) {
+        if (res.data.code == 0) {
+          that.setData({
+            serviceHotline: res.data.data.value
+          });
+        }
+      }
+    })
+  },
+  calling: function () {
+    wx.makePhoneCall({
+      phoneNumber: this.data.serviceHotline,
+      success: function () {
+        console.log("拨打电话成功！")
+      },
+      fail: function () {
+        console.log("拨打电话失败！")
       }
     })
   }

@@ -3,8 +3,13 @@
     <view class="widget-goTop" bindtap="goHome" >
     <view class="gotop-wrap">
     <image src="../../images/home.png" style="vertical-align: middle;width:25px; height: 25px;"></image>
-  </view>
-</view>
+    </view>
+    </view>
+    <view class="widget-goTop1" bindtap="calling" >
+    <view class="gotop-wrap1">
+    <image src="../../images/callphone.png" style="vertical-align: middle;width:25px; height: 25px;"></image>
+    </view>
+    </view>
 
    <view class="swiper-container" wx:if="{{!goodsDetail.basicInfo.videoId}}">
         <swiper class="swiper_box" 
